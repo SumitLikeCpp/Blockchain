@@ -13,7 +13,7 @@ pragma solidity 0.8.24;
 // Automatic Wrap Around for unchecked values
 // uint8 myUint;
 // myUint--;  // => 256
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Fixed Point Numbers
 
 // ufixedMxN or fixedMxN
@@ -30,7 +30,7 @@ pragma solidity 0.8.24;
 // uint balance = 10000;      // 100.00 tokens
 // balance -= 5301;           // subtract 53.01 tokens
 // // balance => 4699 => 46.99 tokens left
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Address in Solidity
 
 // Every interaction on Ethereum is address based

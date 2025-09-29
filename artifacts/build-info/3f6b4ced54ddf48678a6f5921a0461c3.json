@@ -1,0 +1,68 @@
+{
+	"id": "3f6b4ced54ddf48678a6f5921a0461c3",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.24",
+	"solcLongVersion": "0.8.24+commit.e11b9ed9",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"notes.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity 0.8.24;\r\n\r\n// Uint8 to Uint256 in 8-bit increments\r\n// Uint8 ranges from 0 to 255\r\n// Int8 ranges from -128 to +127\r\n// 2^8 => 2**8\r\n\r\n// Uint256 => 2^256\r\n// 'uint' is an alias for uint256\r\n\r\n// Automatic Wrap Around for unchecked values\r\n// uint8 myUint;\r\n// myUint--;  // => 256\r\n////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////\r\n// Fixed Point Numbers\r\n\r\n// ufixedMxN or fixedMxN\r\n// Example: ufixed128x18 => 128 bits with 18 decimal points\r\n\r\n// Note: Fixed points not implemented yet in Solidity\r\n\r\n// Good practice: Assign a decimal point in your smart contract\r\n// uint numTokens = 10000;\r\n// uint decimalPoints = 2;\r\n\r\n// // This represents 100 tokens with divisibility like cents\r\n// // Example:\r\n// uint balance = 10000;      // 100.00 tokens\r\n// balance -= 5301;           // subtract 53.01 tokens\r\n// // balance => 4699 => 46.99 tokens left\r\n////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////\r\n// Address in Solidity\r\n\r\n// Every interaction on Ethereum is address based\r\n// Address holds a 20-byte value (an Ethereum address)\r\n\r\n// Used to transfer Ether from smart contracts to addresses or from addresses to smart contracts\r\n// address payable recipient;\r\n\r\n// // Transfer methods\r\n// recipient.transfer(amount);\r\n// bool success = recipient.send(amount);\r\n// (bool success2, ) = recipient.call{value: amount}(\"\");\r\n// (bool success3, ) = recipient.delegatecall(data);\r\n\r\n// // Address types\r\n// address addr;              // cannot receive Ether\r\n// address payable payAddr;   // can receive Ether\r\n\r\n// // Access balance (in Wei)\r\n// uint balance = addr.balance;"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"sources": {
+			"notes.sol": {
+				"ast": {
+					"absolutePath": "notes.sol",
+					"exportedSymbols": {},
+					"id": 2,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"0.8",
+								".24"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "35:23:0"
+						}
+					],
+					"src": "35:1749:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
