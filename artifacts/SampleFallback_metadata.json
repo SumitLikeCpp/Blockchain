@@ -6,13 +6,25 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
+				"stateMutability": "payable",
+				"type": "fallback"
 			},
 			{
 				"inputs": [],
-				"name": "changeCounter",
+				"name": "lastFunctionCalled",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "lastValueSent",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -25,25 +37,12 @@
 			},
 			{
 				"inputs": [],
-				"name": "owner",
+				"name": "myUint",
 				"outputs": [
 					{
-						"internalType": "address",
+						"internalType": "uint256",
 						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "theMessage",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -52,15 +51,19 @@
 			{
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "_newMessage",
-						"type": "string"
+						"internalType": "uint256",
+						"name": "_myNewUint",
+						"type": "uint256"
 					}
 				],
-				"name": "updateMessage",
+				"name": "setMyUint",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -76,7 +79,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"blockchainMessenger.sol": "TheBlockchainMessenger"
+			"contracts/sampleFallback.sol": "SampleFallback"
 		},
 		"evmVersion": "shanghai",
 		"libraries": {},
@@ -90,12 +93,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"blockchainMessenger.sol": {
-			"keccak256": "0x2bf575924f5887f2e93b8da24d0137e6476879c776cc7bffa3a7a3b0870a2d95",
+		"contracts/sampleFallback.sol": {
+			"keccak256": "0x058abf3f5ef8085566edd762117f7be035f5f110e15b81eef767de93a38a6f4a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0714ab007a69f87589d34deceba6ed515660efa7fb1cfae54e22c6ee0a893b61",
-				"dweb:/ipfs/QmV1oJ5jZXHnJjivdUSVGhp5TpsDcPiYSYch7fZWpCSUwj"
+				"bzz-raw://767c90fc7879f2c3bb57af97f78fb1079defe4885784a71f3a3938808fde33fa",
+				"dweb:/ipfs/QmV34e2s8f7QYdMR5FSJKaxPA8k4pRbmHTazVkBPW8sTLW"
 			]
 		}
 	},
